@@ -28,11 +28,13 @@ class Credentials():
         delete_credentials method that deletes an account credentials from the credentials_list
         """
         Credentials.credentials_list.remove(self)
-    def display_credentials(self):
+        
+    @classmethod
+    def display_credentials(cls):
         """
         method that returns the credentials list
         """
-        return Credentials.credentials_list
+        return cls.credentials_list
 
     def generatePassword(stringLength=8):
         """Generate a random password string of letters and digits and special characters"""

@@ -32,52 +32,65 @@ def find_user(username):
     '''
     return User.find_by_username(username)
 
-def display_Credentials(user_name,password):
+
+def display_Credentials(user_name, password):
     '''
     Function to display credentials
     '''
     return Credentials.display_Credentials()
 
-def create_Credentials(user_name,account,password):
+
+def create_Credentials(user_name, account, password):
     '''
     Function to create a new credential
     '''
-    new_credential = Credentials(user_name,account,password)
+    new_credential = Credentials(user_name, account, password)
     return new_credential
+
+
 def save_Credentials(credential):
     '''
     Function to save credentials
     '''
     credential.save_Credentials()
 
+
 def check_user(username):
     '''
     Function to check if a user exists
     '''
     return User.user_exist(username)
-def user_exists(username,password):
+
+
+def user_exists(username, password):
     '''
     check if user exists
     '''
-    return User.check_user(username,password)
+    return User.check_user(username, password)
+
+
 def display_Credentials():
     '''
     Function to display credentials
     '''
     return Credentials.display_Credentials()
-    
+
+
 def generate_Password():
     '''
     generates a random password for the user.
     '''
     auto_password = Credentials.generatePassword()
     return auto_password
-def login_User(username,password):
+
+
+def login_User(username, password):
     '''
     Function to login user
     '''
-    check_user = Credentials.verify_user(username,password)
+    check_user = Credentials.verify_user(username, password)
     return check_user
+
 
 def main():
     print("Greetings!What is your name?")
@@ -113,46 +126,45 @@ def main():
             print('*' * 50)
             username = input("UserName: ")
             password = input("password: ")
-        if user_exists(username,password):
-            print(f"Greetings! {username}.Welcome,You have successfully now logged in")  
+        if user_exists(username, password):
+            print(
+                f"Greetings! {username}.Welcome,You have successfully now logged in")
             print('\n')
-            
-            #create and save new credential
+
+            # create and save new credential
             while True:
-             print("Use these short codes:\n cnc - Create a new credential \n dc - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n")
-             short_code = input().lower().strip()
-             if short_code == "cnc":
-              print("Create New Credential")
-              print("."*20)
-              print("Account name ....")
-              account = input().lower()
-              print("Your Account username")
-              userName = input()
-              print("Your Password")
-              Password = input()
-              (account, userName, Password)
-              print('\n')
-              print(
-              f"New Credentials for '{account}'  has been created \n")
-              print('*'*10)
-             
-        elif short_code == 'dc':
-         if User.display_Credentials():
-             print("Here is a list of all your credentials")
-             for credential in User.display_Credentials():
-                 print(f"{credential.account}")
-                 print('\n')
-             
-             while True:
-                print(" TP - To type your own password if you already have an account:\n GP - To generate random Password")
-                password_Choice = input().lower().strip()
-                if password_Choice == 'tp':
-                    password = input("Enter Your Own Password\n")
-                    print(f"Your Own password now is {password}")
-                if password_Choice == 'gp':
-                    password = generate_Password()
-                    print(f"You have successfully generated your own password")
-                    break
+                print("Use these short codes:\n cnc - Create a new credential \n dc - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n")
+                short_code = input().lower().strip()
+                if short_code == "cnc":
+                    print("Create New Credential")
+                    print("."*20)
+                    print("Account name ....")
+                    account = input().lower()
+                    print("Your Account username")
+                    userName = input()
+                    print("Your Password")
+                    Password = input()
+                    (account, userName, Password)
+                    print('\n')
+                    print(
+                        f"New Credentials for '{account}'  has been created \n")
+                    print('*'*10)
+
+                elif short_code == 'dc':
+                    if display_Credentials():
+                        print("A list of all your credentials")
+                        for credential in display_Credentials():
+                            print(f"{credential.account}")
+                            print('\n')
+                # print(" TP - To type your own password if you already have an account:\n GP - To generate random Password")
+                # password_Choice = input().lower().strip()
+                # if password_Choice == 'tp':
+                #     password = input("Enter Your Own Password\n")
+                #     print(f"Your Own password now is {password}")
+                # if password_Choice == 'gp':
+                #     password = generate_Password()
+                #     print(f"You have successfully generated your own password")
+                #     break
 
         elif short_code == "ex":
             print("Adios .......")
