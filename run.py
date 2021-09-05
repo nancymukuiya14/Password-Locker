@@ -107,19 +107,19 @@ def main():
                 f"Your account has been created successfully.Your username is {username} and your password is {password}")
             print('\n')
 
-        elif short_code == 'dc':
+        # elif short_code == 'dc':
 
-            if User.display_users():
-                print("Here is a list of all your users")
-                print('\n')
+        #     if User.display_users():
+        #         print("Here is a list of all your users")
+        #         print('\n')
 
-                for user in User.display_users():
-                    print(f"{user.username}")
-                    print('\n')
-            else:
-                print('\n')
-                print("You dont seem to have any users saved yet")
-                print('\n')
+        #         for user in User.display_users():
+        #             print(f"{user.username}")
+        #             print('\n')
+        #     else:
+        #         print('\n')
+        #         print("You dont seem to have any users saved yet")
+        #         print('\n')
 
         elif short_code == "li":
             print("*"*50)
