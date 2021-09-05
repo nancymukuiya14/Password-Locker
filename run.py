@@ -109,10 +109,10 @@ def main():
 
         elif short_code == "li":
             print("*"*50)
-        print("Enter your User name and your Password to log in:")
-        print('*' * 50)
-        username = input("UserName: ")
-        password = input("password: ")
+            print("Enter your User name and your Password to log in:")
+            print('*' * 50)
+            username = input("UserName: ")
+            password = input("password: ")
         if user_exists(username,password):
             print(f"Greetings! {username}.Welcome,You have successfully now logged in")  
             print('\n')
