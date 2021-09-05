@@ -90,7 +90,7 @@ def main():
         print("Use these short codes : cc - create a new account, dc - display users, fc -find a user, li -log in ex -exit the user list ")
 
         short_code = input().lower()
-
+     # create and save new user
         if short_code == 'cc':
             print("New User")
             print("-"*10)
@@ -101,7 +101,6 @@ def main():
             print("Password ...")
             password = input()
 
-            # create and save new user.
             save_users(create_user(username, password))
             print('\n')
             print(
