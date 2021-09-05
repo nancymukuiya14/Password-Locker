@@ -76,8 +76,6 @@ def login_User(username,password):
     '''
     Function to login user
     '''
-    # log_in = User.login_user(username,password)
-    # return log_in
     check_user = Credentials.verify_user(username,password)
     return check_user
 
