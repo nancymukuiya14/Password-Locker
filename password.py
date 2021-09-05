@@ -31,12 +31,7 @@ class User():
         deletes a  saved account from the list
         '''
         User.user_list.remove(self)
-        
-    # def user_exists(cls, username):
-    #     '''
-    #     checks if a user exists
-    #     '''
-    #     return User.user_list
+    
     
     @classmethod    
     def check_user(cls, username, password):
