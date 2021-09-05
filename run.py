@@ -87,7 +87,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes : cc - create a new account, dc - display users, fc -find a user, li -log in ex -exit the user list ")
+        print("Use these short codes : cc - create a new account, dc - display users, li -log in ex -exit the user list ")
 
         short_code = input().lower()
      # create and save new user
@@ -121,20 +121,20 @@ def main():
                 print("You dont seem to have any users saved yet")
                 print('\n')
 
-        elif short_code == 'fc':
+        # elif short_code == 'fc':
 
-            print("Enter the username you want to search for")
+        #     print("Enter the username you want to search for")
 
-            search_username = input()
-            if User.find_by_username(search_username):
-                search_user = find_user(search_username)
-                print(f"{search_user.username}")
-                print('-' * 20)
+        #     search_username = input()
+        #     if User.find_by_username(search_username):
+        #         search_user = find_user(search_username)
+        #         print(f"{search_user.username}")
+        #         print('-' * 20)
 
-                print(f"Username.......{search_user.username}")
-                print(f"Password.......{search_user.password}")
-            else:
-                print("That user does not exist")
+        #         print(f"Username.......{search_user.username}")
+        #         print(f"Password.......{search_user.password}")
+        #     else:
+        #         print("That user does not exist")
 
         elif short_code == "li":
             print("*"*50)
