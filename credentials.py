@@ -28,7 +28,7 @@ class Credentials():
         delete_credentials method that deletes an account credentials from the credentials_list
         """
         Credentials.credentials_list.remove(self)
-        
+
     @classmethod
     def display_credentials(cls):
         """
@@ -48,11 +48,11 @@ class Credentials():
        This method takes in an account and returns a credential that is the same with that of the account_name.
 
        """
-        find_credential = [credential 
-        for credential in cls.credentials_list
-            if credential.account == account]
+        find_credential = [credential
+                           for credential in cls.credentials_list
+                           if credential.account == account]
         return find_credential
-                
+
     #  find_credential = Credentials.find_by_account(account)
     #     for credential in cls.credentials_list:
     #         if credential.account == account:
@@ -66,5 +66,4 @@ class Credentials():
         for credential in cls.credentials_list:
             return credential.userName == username and credential.password == password
         return False
-        # current_user = find_credential(username, password)
-        # return current_user
+        
