@@ -53,11 +53,6 @@ class Credentials():
                            if credential.account == account]
         return find_credential
 
-    #  find_credential = Credentials.find_by_account(account)
-    #     for credential in cls.credentials_list:
-    #         if credential.account == account:
-    #             return credential
-
     @classmethod
     def verify_user(cls, username, password):
         """
