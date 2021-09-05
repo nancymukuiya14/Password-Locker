@@ -44,8 +44,6 @@ class TestClass(unittest.TestCase):
         """
         Test if a user can be found by username
         """
-        
-        
         self.user_exists = User.check_user('Nancykigotho','Maldives106')
         
 if __name__ == '__main__':
