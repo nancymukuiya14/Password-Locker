@@ -146,8 +146,6 @@ def main():
         username = input("UserName: ")
         password = input("password: ")
         if user_exists(username,password):
-        #  login = login_User (username,password)
-        #  if login_User == login:
             print(f"Greetings! {username}.Welcome,You have successfully now logged in")  
             print('\n')
             while True:
