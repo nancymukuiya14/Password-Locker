@@ -116,6 +116,8 @@ def main():
         if user_exists(username,password):
             print(f"Greetings! {username}.Welcome,You have successfully now logged in")  
             print('\n')
+            
+            #create and save new credential
             while True:
              print("Use these short codes:\n cnc - Create a new credential \n dc - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n")
              short_code = input().lower().strip()
