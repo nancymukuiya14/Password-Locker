@@ -33,13 +33,6 @@ def find_user(username):
     return User.find_by_username(username)
 
 
-# def display_Credentials(user_name, password):
-#     '''
-#     Function to display credentials
-#     '''
-#     return Credentials.display_Credentials()
-
-
 def create_Credentials(user_name, account, password):
     '''
     Function to create a new credential
@@ -150,8 +143,6 @@ def main():
                     if password_Choice == 'gp':
                         password = generate_Password()
                         print(f"You have successfully generated your own password")
-                    # print("Your Password")
-                    # Password = input()
                     save_credential(create_Credentials(
                         account, userName, password))
 
@@ -167,9 +158,6 @@ def main():
                             print(credential.userName)
                     else:
                         print("You don't seem to have any credentials saved yet")
-                        # print(f"{credential.account}")
-                        # print('\n')
-                    # break
                 else:
                     print("Sorry,I didn't get that.Please use the short codes")
                     break
