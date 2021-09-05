@@ -121,21 +121,6 @@ def main():
                 print("You dont seem to have any users saved yet")
                 print('\n')
 
-        # elif short_code == 'fc':
-
-        #     print("Enter the username you want to search for")
-
-        #     search_username = input()
-        #     if User.find_by_username(search_username):
-        #         search_user = find_user(search_username)
-        #         print(f"{search_user.username}")
-        #         print('-' * 20)
-
-        #         print(f"Username.......{search_user.username}")
-        #         print(f"Password.......{search_user.password}")
-        #     else:
-        #         print("That user does not exist")
-
         elif short_code == "li":
             print("*"*50)
         print("Enter your User name and your Password to log in:")
@@ -154,14 +139,14 @@ def main():
               print("Account name ....")
               account = input().lower()
               print("Your Account username")
-             userName = input()
-             print("Your Password")
-             Password = input()
-             (account, userName, Password)
-             print('\n')
-             print(
-             f"New Credentials for '{account}'  has been created \n")
-             print('*'*10)
+              userName = input()
+              print("Your Password")
+              Password = input()
+              (account, userName, Password)
+              print('\n')
+              print(
+              f"New Credentials for '{account}'  has been created \n")
+              print('*'*10)
              
         elif short_code == 'dc':
          if User.display_Credentials():
