@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.8
 import unittest
-from password import User
+from user import User
 from credentials import Credentials
 
 
